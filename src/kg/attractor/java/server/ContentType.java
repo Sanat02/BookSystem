@@ -10,7 +10,7 @@ public enum ContentType {
     private final String descr;
 
     ContentType(String descr) {
-        this.descr =  descr;
+        this.descr = descr;
     }
 
     @Override

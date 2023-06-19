@@ -53,9 +53,9 @@ public class Lesson44Server extends BasicServer {
             renderTemplate(exchange, "sample.html", getSampleDataModel());
         } else if (requestPath.equals("/employee")) {
             renderTemplate(exchange, "employee.html", getEmployeeDataModel());
-        }else if (requestPath.equals("/book")) {
+        } else if (requestPath.equals("/book")) {
             renderTemplate(exchange, "book.html", getBookDataModel());
-        }else if (requestPath.equals("/bookinfo")) {
+        } else if (requestPath.equals("/bookinfo")) {
             renderTemplate(exchange, "bookinfo.html", getBookDataModel());
         }
 
@@ -103,6 +103,7 @@ public class Lesson44Server extends BasicServer {
         // которую freemarker будет использовать для наполнения шаблона
         return new EmployeeDataModel();
     }
+
     private BookDataModel getBookDataModel() {
         // возвращаем экземпляр тестовой модели-данных
         // которую freemarker будет использовать для наполнения шаблона

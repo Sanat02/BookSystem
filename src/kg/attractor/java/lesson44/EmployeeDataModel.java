@@ -52,14 +52,14 @@ public class EmployeeDataModel {
         private String currentBook;
 
 
-        public Employee(String firstName, String lastName,String email,String job,String phone,String image,String currentBook) {
+        public Employee(String firstName, String lastName, String email, String job, String phone, String image, String currentBook) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.email = email;
-            this.job=job;
-            this.phone=phone;
-            this.image=image;
-            this.currentBook=currentBook;
+            this.job = job;
+            this.phone = phone;
+            this.image = image;
+            this.currentBook = currentBook;
         }
 
         public String getFirstName() {

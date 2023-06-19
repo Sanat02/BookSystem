@@ -59,7 +59,7 @@ public class SampleDataModel {
             this.firstName = firstName;
             this.lastName = lastName;
             this.middleName = middleName;
-            this.email = firstName+"@test.mail";
+            this.email = firstName + "@test.mail";
         }
 
         public String getFirstName() {

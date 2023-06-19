@@ -13,7 +13,8 @@ import java.util.List;
 
 public class BookDataModel {
     private List<Book> books = new ArrayList<>();
-    private Book book=new Book("Alice in Wonderland", "fairy-tayle", "unknown","images/alice.jpg","given","Vin Diesel");
+    private Book book = new Book("Alice in Wonderland", "fairy-tayle", "unknown", "images/alice.jpg", "given", "Vin Diesel");
+
     public BookDataModel() {
         books = readFile();
     }
@@ -56,13 +57,13 @@ public class BookDataModel {
         private String state;
         private String bookTaker;
 
-        public Book(String name, String genre, String author,String image ,String state,String bookTaker ) {
+        public Book(String name, String genre, String author, String image, String state, String bookTaker) {
             this.name = name;
             this.genre = genre;
             this.author = author;
-            this.image=image;
-            this.state= state;
-            this.bookTaker=bookTaker;
+            this.image = image;
+            this.state = state;
+            this.bookTaker = bookTaker;
         }
 
         public String getName() {
