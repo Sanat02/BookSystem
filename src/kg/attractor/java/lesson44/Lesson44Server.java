@@ -9,14 +9,20 @@ import kg.attractor.java.server.BasicServer;
 import kg.attractor.java.server.ContentType;
 import kg.attractor.java.server.ResponseCodes;
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 public class Lesson44Server extends BasicServer {
     private final static Configuration freemarker = initFreeMarker();
 
     public Lesson44Server(String host, int port) throws IOException {
         super(host, port);
+        registerGet("/employee", this::freemarkerSampleHandler);
         registerGet("/sample", this::freemarkerSampleHandler);
+        registerGet("/book", this::freemarkerSampleHandler);
+        registerGet("/bookinfo", this::freemarkerSampleHandler);
     }
 
     private static Configuration initFreeMarker() {
@@ -41,7 +47,18 @@ public class Lesson44Server extends BasicServer {
     }
 
     private void freemarkerSampleHandler(HttpExchange exchange) {
-        renderTemplate(exchange, "sample.html", getSampleDataModel());
+        String requestPath = exchange.getRequestURI().getPath();
+        System.out.println(requestPath);
+        if (requestPath.equals("/sample")) {
+            renderTemplate(exchange, "sample.html", getSampleDataModel());
+        } else if (requestPath.equals("/employee")) {
+            renderTemplate(exchange, "employee.html", getEmployeeDataModel());
+        }else if (requestPath.equals("/book")) {
+            renderTemplate(exchange, "book.html", getBookDataModel());
+        }else if (requestPath.equals("/bookinfo")) {
+            renderTemplate(exchange, "bookinfo.html", getBookDataModel());
+        }
+
     }
 
     protected void renderTemplate(HttpExchange exchange, String templateFile, Object dataModel) {
@@ -79,5 +96,16 @@ public class Lesson44Server extends BasicServer {
         // возвращаем экземпляр тестовой модели-данных
         // которую freemarker будет использовать для наполнения шаблона
         return new SampleDataModel();
+    }
+
+    private EmployeeDataModel getEmployeeDataModel() {
+        // возвращаем экземпляр тестовой модели-данных
+        // которую freemarker будет использовать для наполнения шаблона
+        return new EmployeeDataModel();
+    }
+    private BookDataModel getBookDataModel() {
+        // возвращаем экземпляр тестовой модели-данных
+        // которую freemarker будет использовать для наполнения шаблона
+        return new BookDataModel();
     }
 }
