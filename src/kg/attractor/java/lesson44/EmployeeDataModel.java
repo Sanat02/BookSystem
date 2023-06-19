@@ -50,9 +50,10 @@ public class EmployeeDataModel {
         private String phone;
         private String image;
         private String currentBook;
+        private List<String> takenBooks;
 
 
-        public Employee(String firstName, String lastName, String email, String job, String phone, String image, String currentBook) {
+        public Employee(String firstName, String lastName, String email, String job, String phone, String image, String currentBook,List<String> takenBooks) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.email = email;
@@ -60,6 +61,7 @@ public class EmployeeDataModel {
             this.phone = phone;
             this.image = image;
             this.currentBook = currentBook;
+            this.takenBooks=takenBooks;
         }
 
         public String getFirstName() {
@@ -116,6 +118,14 @@ public class EmployeeDataModel {
 
         public void setCurrentBook(String currentBook) {
             this.currentBook = currentBook;
+        }
+
+        public List<String> getTakenBooks() {
+            return takenBooks;
+        }
+
+        public void setTakenBooks(List<String> takenBooks) {
+            this.takenBooks = takenBooks;
         }
     }
 }
