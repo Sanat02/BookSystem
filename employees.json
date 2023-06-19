@@ -1,0 +1,11 @@
+ [
+    {"firstName": "Angelina","lastName": "Jolie","email": "angelina.@gmail.com","job":"Ceo","phone":"0779137552","image": "images/e10.jpg","currentBook":"Alice in Wonderland"},
+    {"firstName": "Prince","lastName": "Charming","email": "charming.@gmail.com","job":"Developer","phone":"0775537572","image": "images/e2.jpg","currentBook":"none"},
+    {"firstName": "Emilia","lastName": "Clarke","email": "emy.@gmail.com","job":"Hr-manager","phone":"0559137572","image": "images/e3.jpg","currentBook":"none"},
+    {"firstName": "Harry","lastName": "Potter","email": "potter.@gmail.com","job":"Developer","phone":"0779137572","image": "images/e4.jpg","currentBook":"The Great Gatsby"},
+    {"firstName": "Princess","lastName": "Tiana","email": "prtiana.@gmail.com","job":"Team-lead","phone":"0788137572","image": "images/e6.jpg","currentBook": "The Hobbit"},
+    {"firstName": "Vin","lastName": "Diesel","email": "dizel.@gmail.com","job":"Hr-manager","phone":"0776667572","image": "images/e7.jpg","currentBook": "Alice in Wonderland"},
+    {"firstName": "Alan","lastName": "Rickman","email": "rick@gmail.com","job":"Director","phone":"0777137572","image": "images/e8.jpg","currentBook": "The diary of a Young Girl"},
+    {"firstName": "Prince","lastName": "Harry","email": "harryroyal.@gmail.com","job":"Developer","phone":"0733337572","image": "images/e9.jpg","currentBook": "Don Quixote"}
+ ]
+
